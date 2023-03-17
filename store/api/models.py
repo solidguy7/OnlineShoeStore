@@ -1,9 +1,21 @@
 from django.db import models
 
+class Brand(models.Model):
+    brand_name = models.CharField(max_length=20)
+
+    class Meta:
+        ordering = ['brand_name']
+        indexes = [
+            models.Index(fields=['brand_name'])
+        ]
+
+    def __str__(self):
+        return self.brand_name
+
 class Item(models.Model):
     title = models.CharField(max_length=50)
     sku = models.CharField(max_length=10)
-    brand_name = models.CharField(max_length=20)
+    brand_name = models.ForeignKey(Brand, related_name='item', on_delete=models.CASCADE)
 
     class Meta:
         ordering = ['title']
