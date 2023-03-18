@@ -1,0 +1,54 @@
+[
+{
+  "model": "api.brand",
+  "pk": 0,
+  "fields": {
+    "brand_name": "GUCCI"
+  }
+},
+{
+  "model": "api.item",
+  "pk": 0,
+  "fields": {
+    "title": "Ботинки",
+    "sku": "АБВ1",
+    "brand_name": 0
+  }
+},
+{
+  "model": "api.size",
+  "pk": 0,
+  "fields": {
+    "item": 0,
+    "title": "42"
+  }
+},
+{
+  "model": "api.size",
+  "pk": 1,
+  "fields": {
+    "item": 0,
+    "title": "43"
+  }
+},
+{
+  "model": "api.price",
+  "pk": 0,
+  "fields": {
+    "price": 70000,
+    "size": 0,
+    "created": "2023-03-18T15:13:28Z",
+    "updated": "2023-03-18T15:13:31Z"
+  }
+},
+{
+  "model": "api.price",
+  "pk": 1,
+  "fields": {
+    "price": 75000,
+    "size": 1,
+    "created": "2023-03-18T15:13:44Z",
+    "updated": "2023-03-18T15:13:47Z"
+  }
+}
+]

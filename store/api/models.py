@@ -31,9 +31,9 @@ class Size(models.Model):
     title = models.CharField(max_length=5)
 
     class Meta:
-        ordering = ['size']
+        ordering = ['title']
         indexes = [
-            models.Index(fields=['size'])
+            models.Index(fields=['title'])
         ]
 
     def __str__(self):
@@ -46,9 +46,9 @@ class Price(models.Model):
     updated = models.DateTimeField(auto_now=True)
 
     class Meta:
-        ordering = ['-updated, -created']
+        ordering = ['-updated']
         indexes = [
-            models.Index(fields=['-updated', '-created'])
+            models.Index(fields=['-updated'])
         ]
 
     def __str__(self):
