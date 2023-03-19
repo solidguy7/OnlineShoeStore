@@ -7,12 +7,28 @@
   }
 },
 {
+  "model": "api.brand",
+  "pk": 1,
+  "fields": {
+    "brand_name": "DOLCE"
+  }
+},
+{
   "model": "api.item",
   "pk": 0,
   "fields": {
     "title": "Ботинки",
     "sku": "АБВ1",
     "brand_name": 0
+  }
+},
+{
+  "model": "api.item",
+  "pk": 1,
+  "fields": {
+    "title": "Кофта",
+    "sku": "АБ2",
+    "brand_name": 1
   }
 },
 {
@@ -29,6 +45,22 @@
   "fields": {
     "item": 0,
     "title": "43"
+  }
+},
+{
+  "model": "api.size",
+  "pk": 2,
+  "fields": {
+    "item": 1,
+    "title": "40"
+  }
+},
+{
+  "model": "api.size",
+  "pk": 3,
+  "fields": {
+    "item": 1,
+    "title": "41"
   }
 },
 {
@@ -49,6 +81,36 @@
     "size": 1,
     "created": "2023-03-18T15:13:44Z",
     "updated": "2023-03-18T15:13:47Z"
+  }
+},
+{
+  "model": "api.price",
+  "pk": 2,
+  "fields": {
+    "price": 55000,
+    "size": 2,
+    "created": "2023-03-19T06:51:32Z",
+    "updated": "2023-03-19T06:51:35Z"
+  }
+},
+{
+  "model": "api.price",
+  "pk": 3,
+  "fields": {
+    "price": 120000,
+    "size": 3,
+    "created": "2023-03-19T06:52:01Z",
+    "updated": "2023-03-19T06:52:04Z"
+  }
+},
+{
+  "model": "api.price",
+  "pk": 4,
+  "fields": {
+    "price": 25000,
+    "size": 0,
+    "created": "2023-03-19T06:52:19Z",
+    "updated": "2023-03-19T06:52:22Z"
   }
 }
 ]
