@@ -4,5 +4,5 @@ from . import views
 app_name = 'api'
 
 urlpatterns = [
-    path('', views.GetAllItemsView.as_view(), name='get_all_items_view'),
+    path('', views.ItemsListView.as_view(), name='items_list_view'),
 ]
