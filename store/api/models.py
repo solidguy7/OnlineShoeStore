@@ -15,7 +15,7 @@ class Brand(models.Model):
 class Item(models.Model):
     title = models.CharField(max_length=50)
     sku = models.CharField(max_length=10)
-    brand_name = models.ForeignKey(Brand, related_name='item', on_delete=models.CASCADE)
+    brand_name = models.ForeignKey(Brand, related_name='items', on_delete=models.CASCADE)
 
     class Meta:
         ordering = ['title']
@@ -27,7 +27,7 @@ class Item(models.Model):
         return self.title
 
 class Size(models.Model):
-    item = models.ForeignKey(Item, related_name='size', on_delete=models.CASCADE)
+    item = models.ForeignKey(Item, related_name='sizes', on_delete=models.CASCADE)
     title = models.CharField(max_length=5)
 
     class Meta:
@@ -41,7 +41,7 @@ class Size(models.Model):
 
 class Price(models.Model):
     price = models.PositiveIntegerField()
-    size = models.ForeignKey(Size, related_name='price', on_delete=models.CASCADE)
+    size = models.ForeignKey(Size, related_name='prices', on_delete=models.CASCADE)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
